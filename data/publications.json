@@ -1,0 +1,20 @@
+{
+  "publications": [
+    {
+      "title": "A Three-Stage Framework for Bangla License Plate Detection and Recognition",
+      "authors": [
+        "Nahid Hasan",
+        "Ariful Islam",
+        "Md. Julker Nayeem",
+        "Sohel Rana",
+        "Md. Rabiul Islam"
+      ],
+      "type": "Preprint",
+      "year": 2023,
+      "journal_conference": "International Journal of Cognitive Computing in Engineering",
+      "publisher": "SSRN",
+      "link": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4648216",
+      "citation": "Hasan, Nahid and Islam, Md. Ariful and Nayeem, Md. Julker and Rana, Sohel and Islam, Md. Rabiul, A Three-Stage Framework for Automatic Bengali License Plate Detection and Recognition System. Available at SSRN: https://ssrn.com/abstract=4648216 or http://dx.doi.org/10.2139/ssrn.4648216"
+    }
+  ]
+}
