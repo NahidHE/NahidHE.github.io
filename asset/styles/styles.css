@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* border: 1px solid red; */
 }
 
 :root {
@@ -380,29 +381,83 @@ button {
 @media (max-width: 800px) {
   .hero {
     flex-direction: column;
+    height: 300px;
+  }
+  .hero_container {
+    padding: 0 20px;
+    gap: 20px;
   }
   .logo-text {
     display: none;
   }
   .hero_left {
     width: 100%;
+    display: absolute;
   }
   .hero_left h2 {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }
 @media (max-width: 600px) {
   .hero_container {
     flex-direction: column;
-  }
-  .hero_container {
     display: relative;
   }
   .hero_left {
     position: absolute;
     z-index: 2;
-    top: 30%;
+    top: 20%;
     align-items: center;
     padding: 0 auto;
   }
+  .hero_image {
+    display: none;
+  }
+}
+.about {
+  background-color: #fff;
+}
+.about_container {
+  background-color: #fff;
+  align-items: center;
+  max-width: 1200px;
+  padding: 20px 80px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  min-height: 40vh;
+  justify-content: space-between;
+
+  text-align: center;
+}
+.section_header {
+  padding-top: 10px;
+  font-size: 2rem;
+  color: var(--gray);
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.profile_pic img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0px 2px 10px #eee;
+}
+
+@media (max-width: 800px) {
+  .about_container {
+    flex-direction: column;
+    padding: 20px 20px;
+    gap: 20px;
+  }
+  .section_header {
+    font-size: 1.5rem;
+  }
+}
+.profile_description p {
+  text-align: justify;
 }
