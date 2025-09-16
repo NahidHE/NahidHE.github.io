@@ -540,9 +540,12 @@ button {
   justify-content: space-between;
 }
 
-li {
+.experience-section li {
   list-style: none;
   padding-bottom: 20px;
+}
+.experience-section li:last-child {
+  padding-bottom: 0;
 }
 
 div {
