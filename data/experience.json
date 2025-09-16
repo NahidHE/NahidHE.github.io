@@ -4,7 +4,9 @@
       "company": "Pundra University of Science & Technology",
       "position": "Lecturer",
       "duration": "April 2024 - Present",
-      "location": "Bogura, Bangladesh"
+      "location": "Bogura, Bangladesh",
+      "logo": "asset/logos/pundra_university.png",
+      "description": "Teaching undergraduate courses in Computer Science and Engineering, including Object Oriented Programming, Discrete Mathematics, and Compiler Design. Mentoring students on academic projects and research initiatives."
     }
   ]
 }
