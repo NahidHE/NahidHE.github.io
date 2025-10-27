@@ -1,3 +1,54 @@
+/* Publication List Styles */
+.publications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.publication-box {
+  display: block;
+  padding: 18px 24px;
+  /* background: #fafaf6;
+  box-shadow: 0 2px 12px #eee; */
+  border-radius: 14px;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.2s, background 0.6s;
+}
+.publication-box:hover {
+  background: #fff;
+  box-shadow: 0 4px 20px #ddd;
+}
+.publication-title {
+  font-weight: 600;
+  font-size: 1.08rem;
+  color: var(--purple);
+  margin-bottom: 6px;
+}
+.publication-authors,
+.publication-meta {
+  font-size: 0.97rem;
+  color: #444;
+}
+@media (max-width: 800px) {
+  .publications-list {
+    gap: 12px;
+  }
+  .publication-box {
+    padding: 12px 10px;
+  }
+}
+/* Publication Container Design */
+#publications_container {
+  max-width: 1200px;
+  padding: 20px 80px;
+  margin: 0 auto;
+}
+@media (max-width: 800px) {
+  #publications_container {
+    padding: 20px 20px;
+  }
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 
 * {
@@ -614,4 +665,27 @@ div {
   margin-top: 8px;
   line-height: 1.6;
   font-family: "Space Grotesk", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.see_more {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.see_more a {
+  text-align: center;
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 50px;
+  background: var(--gray);
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s;
+  /* margin: 0 auto; */
+}
+.see_more a:hover {
+  background: var(--aqua);
 }

@@ -1,0 +1,46 @@
+{
+  "author": [
+    {
+      "id": "0",
+      "firstName": "Nahid",
+      "lastName": "Hasan",
+      "affiliation": "Department of Computer Science and Engineering, Pundra university of Science and Technology",
+      "email": "nahidpundra.cse@gmail.com"
+    },
+    {
+      "id": "1",
+      "firstName": "Md. Julker",
+      "lastName": "Nayeem",
+      "affiliation": "Department of Computer Science and Engineering, International Islami University of Science and Technology, Bangladesh",
+      "email": "julkernayeemmt.72@gmail.com"
+    },
+    {
+      "id": "2",
+      "firstName": "Ariful",
+      "lastName": "Islam",
+      "affiliation": "Department of Computer Science and Engineering, Pundra university of Science and Technology",
+      "email": "munirpundra.cse@gmail.com"
+    },
+    {
+      "id": "3",
+      "firstName": "Sohel",
+      "lastName": "Rana",
+      "affiliation": "Department of Information and Communication Technology, Chandpur Science and Technology University",
+      "email": "soheranacse052@gmail.com"
+    },
+    {
+      "id": "4",
+      "firstName": "Md. Rabiul",
+      "lastName": "Islam",
+      "affiliation": "Department of Computer Science and Engineering, International Islami University of Science and Technology, Bangladesh",
+      "email": "mdrabiulislam521@gmail.com "
+    },
+    {
+      "id": "5",
+      "firstName": "Md. Shahid Uz",
+      "lastName": "Zaman",
+      "affiliation": "Department of Computer Science and Engineering, Rajshahi University of Engineering & Technology",
+      "email": "szaman22.ruet@gmail.com"
+    }
+  ]
+}

@@ -1,3 +1,31 @@
+// Render publications list on homepage with mapped author names
+Promise.all([
+  fetch("./data/publications.json").then((r) => r.json()),
+  fetch("./data/author.json").then((r) => r.json()),
+]).then(([pubData, authorData]) => {
+  const publications = pubData.publications.slice(0, 3);
+  const authors = authorData.author;
+  const getAuthorName = (id) => {
+    const found = authors.find((a) => a.id == id);
+    return found ? `${found.firstName} ${found.lastName}` : "";
+  };
+  const container = document.getElementById("publications_container");
+  if (container && publications.length) {
+    let html = '<div class="publications-list">';
+    publications.forEach((pub) => {
+      const authorNames = pub.authors.map(getAuthorName).join(", ");
+      html += `
+        <a href="${pub.link}" target="_blank" class="publication-box">
+          <div class="publication-title">${pub.title}</div>
+          <div class="publication-authors">${authorNames}</div>
+          <div class="publication-meta">${pub.journal_conference}, ${pub.year}</div>
+        </a>
+      `;
+    });
+    html += "</div>";
+    container.innerHTML = html;
+  }
+});
 // import experienceData from '../data/experience.json' assert { type: 'json' };
 fetch("./data/experience.json")
   .then((response) => response.json())

@@ -3,11 +3,13 @@
     {
       "degree": "M.Sc [Engg.] in CSE",
       "institute": "Rajshahi University of Engineering & Technology (RUET)",
+      "logo": "ruet.png",
       "year": "Ongoing"
     },
     {
       "degree": "B.Sc in CSE",
       "institute": "Pundra University of Science & Technology",
+      "logo": "pundra_university.png",
       "year": "2023"
     }
   ]

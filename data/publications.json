@@ -2,13 +2,7 @@
   "publications": [
     {
       "title": "A Three-Stage Framework for Bangla License Plate Detection and Recognition",
-      "authors": [
-        "Nahid Hasan",
-        "Ariful Islam",
-        "Md. Julker Nayeem",
-        "Sohel Rana",
-        "Md. Rabiul Islam"
-      ],
+      "authors": [0, 1, 2, 3, 4, 5],
       "type": "Preprint",
       "year": 2023,
       "journal_conference": "International Journal of Cognitive Computing in Engineering",
