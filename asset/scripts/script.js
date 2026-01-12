@@ -56,3 +56,43 @@ fetch("./data/experience.json")
       section.innerHTML = html;
     }
   });
+
+// Render education section (same visual style as experience)
+fetch("./data/education.json")
+  .then((res) => res.json())
+  .then((eduData) => {
+    const list = eduData.education;
+    const container = document.getElementById("education_container");
+    if (container && Array.isArray(list)) {
+      let html = '<ul class="experience-list">';
+      list.forEach((ed) => {
+        // decide logo path: if contains '/' use as-is, otherwise look in asset/images
+        let logoPath = ed.logo || "";
+        if (logoPath && !logoPath.includes("/")) {
+          logoPath = `asset/logos/${logoPath}`;
+        }
+        // ensure relative path from script: prefix ./
+        if (logoPath && !logoPath.startsWith("./")) logoPath = "./" + logoPath;
+
+        html += `
+          <li class="experience-item">
+            <div class="experience-flex">
+              <div class="experience-logo-wrap">
+                <img src="${logoPath}" alt="${
+          ed.institute
+        } logo" class="experience-logo" />
+              </div>
+              <div class="experience-details">
+                <h3 class="experience-position">${ed.degree}</h3>
+                <div class="experience-company">${ed.institute}</div>
+                <div class="experience-duration">${ed.year || ""}</div>
+              </div>
+            </div>
+          </li>
+        `;
+      });
+      html += "</ul>";
+      container.innerHTML = html;
+    }
+  })
+  .catch((err) => console.error("Failed to load education.json", err));
