@@ -96,3 +96,52 @@ fetch("./data/education.json")
     }
   })
   .catch((err) => console.error("Failed to load education.json", err));
+
+// Handle contact form submission
+document.addEventListener("DOMContentLoaded", () => {
+  const contactForm = document.querySelector(".contact_me form");
+  if (contactForm) {
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      // Initialize EmailJS with your public key
+      emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+
+      // Send email
+      emailjs
+        .send(EMAILJS_CONFIG.SERVICE_ID, EMAILJS_CONFIG.TEMPLATE_ID, {
+          name: contactForm.querySelector('input[type="text"]').value,
+          email: contactForm.querySelector('input[type="email"]').value,
+          message: contactForm.querySelector("textarea").value,
+          to_email: "nahidpundra.cse@gmail.com",
+          reply_to: contactForm.querySelector('input[type="email"]').value,
+        })
+        .then(() => {
+          // Show success modal
+          const modal = document.getElementById('successModal');
+          modal.style.display = 'block';
+          contactForm.reset();
+        })
+        .catch((error) => {
+          console.error("Email send failed:", error);
+          alert(
+            "Sorry, there was an error sending your message. Please try again later."
+          );
+        });
+    });
+  }
+
+  // Modal close functionality
+  const modal = document.getElementById('successModal');
+  const closeBtn = document.querySelector('.close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+  }
+  window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+});
