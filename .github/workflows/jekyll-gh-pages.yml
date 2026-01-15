@@ -28,6 +28,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
       - name: Generate config from secrets
         run: |
           cat > asset/scripts/config.js << 'EOF'
@@ -38,8 +40,6 @@ jobs:
             TEMPLATE_ID: "${{ secrets.EMAILJS_TEMPLATE_ID }}",
           };
           EOF
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
