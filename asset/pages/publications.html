@@ -1,11 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Publications | Nahid HE</title>
+    <link rel="stylesheet" href="../../asset/styles/styles.css" />
+    <link rel="stylesheet" href="../../asset/styles/publication_style.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../asset/images/favicon.ico"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
   </head>
   <body>
-    <h1>This page is under construction!</h1>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-title">
+          <div class="logo">
+            <img class="logo-img" src="../images/logo.png" alt="Logo" />
+            <h2 class="logo-text">NahidHE</h2>
+          </div>
+        </div>
+        <input type="checkbox" id="navbar-toggle" class="navbar-toggle" />
+        <label for="navbar-toggle" class="navbar-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <ul class="navbar-menu">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="#">Publications</a></li>
+          <li><a href="./blogs.html">Blogs</a></li>
+          <li><a href="../../index.html#contact_me_section">Contact Me</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- show publication list -->
+    <section class="publications_section">
+      <div class="publications_container">
+        <h2>Publications</h2>
+
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="All">All</button>
+          <button class="filter-btn" data-filter="Symposium">Symposium</button>
+          <button class="filter-btn" data-filter="Conference">
+            Conference
+          </button>
+          <button class="filter-btn" data-filter="Book">Book</button>
+          <button class="filter-btn" data-filter="Journal">Journal</button>
+          <button class="filter-btn" data-filter="Preprint">Preprint</button>
+        </div>
+
+        <!-- Publications List -->
+        <div id="publications_list" class="publications-list"></div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Nahid Hasan. All rights reserved.</p>
+    </footer>
+
+    <script src="../scripts/publication.js"></script>
   </body>
 </html>

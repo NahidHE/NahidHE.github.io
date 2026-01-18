@@ -255,18 +255,23 @@ button {
 .button:hover .button-inner-static {
   opacity: 0;
   transform: translateY(-70%);
-  transition: transform 1.4s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.3s linear;
+  transition:
+    transform 1.4s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 0.3s linear;
 }
 
 .button:hover .button-inner-hover {
   opacity: 1;
   transform: translateY(0);
-  transition: transform 1.4s cubic-bezier(0.19, 1, 0.22, 1),
+  transition:
+    transform 1.4s cubic-bezier(0.19, 1, 0.22, 1),
     opacity 1.4s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .button:hover .button-bg-layer {
-  transition: transform 1.3s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.3s linear;
+  transition:
+    transform 1.3s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 0.3s linear;
 }
 
 .button:hover .button-bg-layer-1 {
@@ -793,47 +798,96 @@ footer {
 .publications-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 14px;
 }
+
 .publication-box {
   display: block;
-  padding: 18px 24px;
-  /* background: #fafaf6;
-  box-shadow: 0 2px 12px #eee; */
-  border-radius: 14px;
+  padding: 20px 24px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
   text-decoration: none;
   color: inherit;
-  transition: box-shadow 0.2s, background 0.6s;
+  background: white;
+  transition: all 0.3s ease;
 }
+
 .publication-box:hover {
-  background: #fff;
-  box-shadow: 0 4px 20px #ddd;
+  border-color: var(--purple);
+  box-shadow: 0 6px 20px rgba(138, 43, 226, 0.12);
+  transform: translateY(-2px);
 }
+
 .publication-title {
-  font-weight: 600;
-  font-size: 1.08rem;
+  font-weight: 700;
+  font-size: 1.1rem;
   color: var(--purple);
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.publication-authors {
+  font-size: 0.95rem;
+  color: #555;
+  font-weight: 500;
   margin-bottom: 6px;
 }
-.publication-authors,
+
 .publication-meta {
-  font-size: 0.97rem;
-  color: #444;
+  font-size: 0.9rem;
+  color: #777;
+  font-style: italic;
 }
+
 @media (max-width: 800px) {
   .publications-list {
     gap: 12px;
   }
+
   .publication-box {
-    padding: 12px 10px;
+    padding: 16px 20px;
+    border-radius: 10px;
+  }
+
+  .publication-title {
+    font-size: 1.05rem;
+  }
+
+  .publication-authors {
+    font-size: 0.93rem;
+  }
+
+  .publication-meta {
+    font-size: 0.88rem;
   }
 }
+
+@media (max-width: 600px) {
+  .publication-box {
+    padding: 14px 16px;
+  }
+
+  .publication-title {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+
+  .publication-authors {
+    font-size: 0.9rem;
+  }
+
+  .publication-meta {
+    font-size: 0.85rem;
+  }
+}
+
 /* Publication Container Design */
 #publications_container {
   max-width: 1200px;
   padding: 20px 80px;
   margin: 0 auto;
 }
+
 @media (max-width: 800px) {
   #publications_container {
     padding: 20px 20px;
